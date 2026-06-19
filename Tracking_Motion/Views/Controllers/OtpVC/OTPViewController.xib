@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="Tracking_Motion" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="GIe-K2-eaH" id="dfr-t6-9Fk"/>
+                <outlet property="requestLabel" destination="NGb-CY-jQL" id="loS-tk-gOl"/>
+                <outlet property="submitButton" destination="O4g-HD-uZD" id="Bkq-MS-9gJ"/>
+                <outlet property="timerLabel" destination="EGj-HY-C93" id="qdt-V4-s3G"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="otpTextField" destination="nEE-zD-Y2t" collectionClass="NSMutableArray" id="bo4-mV-H6U"/>
+                <outletCollection property="otpTextField" destination="2Nf-rI-egm" collectionClass="NSMutableArray" id="nLx-zH-CKF"/>
+                <outletCollection property="otpTextField" destination="Pvi-DQ-p4a" collectionClass="NSMutableArray" id="rcW-X0-ts2"/>
+                <outletCollection property="otpTextField" destination="yKO-2U-Olv" collectionClass="NSMutableArray" id="Z4a-5z-5OX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="OTPViewController" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIe-K2-eaH">
+                    <rect key="frame" x="20" y="209" width="353" height="330"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JI8-NP-eQC">
+                            <rect key="frame" x="15" y="130" width="323" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKO-2U-Olv">
+                                    <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pvi-DQ-p4a">
+                                    <rect key="frame" x="82" y="0.0" width="77" height="50"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-rI-egm">
+                                    <rect key="frame" x="164" y="0.0" width="77" height="50"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-zD-Y2t">
+                                    <rect key="frame" x="246" y="0.0" width="77" height="50"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ikW-5b-eCL"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="IQt-Gb-NPk">
+                            <rect key="frame" x="63.666666666666671" y="215" width="225.66666666666663" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-HY-C93">
+                                    <rect key="frame" x="0.0" y="7.6666666666666856" width="94.666666666666671" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="p8M-Y0-u4y"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-CY-jQL">
+                                    <rect key="frame" x="105.66666666666669" y="0.0" width="120" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="ZW6-DE-X31"/>
+                                        <constraint firstAttribute="width" constant="120" id="nni-sG-tD8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <state key="normal" title="Request again">
+                                        <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q12-6C-QE0">
+                            <rect key="frame" x="10" y="25" width="333" height="39"/>
+                            <string key="text">Please enter the 4 digit OTP sent to
++966 999 666 444</string>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-HD-uZD">
+                            <rect key="frame" x="126.66666666666666" y="270" width="100" height="40"/>
+                            <color key="backgroundColor" systemColor="systemMintColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RUZ-N9-ecc"/>
+                                <constraint firstAttribute="width" constant="100" id="WLp-ww-53F"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickOnSubmitButton:" destination="-1" eventType="touchUpInside" id="nEJ-pp-uP9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="q12-6C-QE0" firstAttribute="centerX" secondItem="GIe-K2-eaH" secondAttribute="centerX" id="1FH-bp-ypO"/>
+                        <constraint firstAttribute="trailing" secondItem="JI8-NP-eQC" secondAttribute="trailing" constant="15" id="1Qa-eV-WV2"/>
+                        <constraint firstItem="IQt-Gb-NPk" firstAttribute="leading" secondItem="GIe-K2-eaH" secondAttribute="leading" constant="63.666666666666686" id="O6X-xF-Cia"/>
+                        <constraint firstItem="IQt-Gb-NPk" firstAttribute="top" secondItem="JI8-NP-eQC" secondAttribute="bottom" constant="35" id="VeX-F3-crp"/>
+                        <constraint firstItem="IQt-Gb-NPk" firstAttribute="centerX" secondItem="GIe-K2-eaH" secondAttribute="centerX" id="WLN-VB-RKP"/>
+                        <constraint firstItem="q12-6C-QE0" firstAttribute="leading" secondItem="GIe-K2-eaH" secondAttribute="leading" constant="10" id="Yn7-Id-6vl"/>
+                        <constraint firstAttribute="trailing" secondItem="q12-6C-QE0" secondAttribute="trailing" constant="10" id="ZLr-j7-2Iy"/>
+                        <constraint firstAttribute="height" constant="330" id="otY-pT-vim"/>
+                        <constraint firstItem="O4g-HD-uZD" firstAttribute="top" secondItem="IQt-Gb-NPk" secondAttribute="bottom" constant="15" id="owW-as-CYu"/>
+                        <constraint firstItem="JI8-NP-eQC" firstAttribute="leading" secondItem="GIe-K2-eaH" secondAttribute="leading" constant="15" id="pof-sA-hUZ"/>
+                        <constraint firstAttribute="bottom" secondItem="O4g-HD-uZD" secondAttribute="bottom" constant="20" id="ro8-iU-bKh"/>
+                        <constraint firstItem="q12-6C-QE0" firstAttribute="top" secondItem="GIe-K2-eaH" secondAttribute="top" constant="25" id="tLc-qH-50R"/>
+                        <constraint firstItem="O4g-HD-uZD" firstAttribute="centerX" secondItem="GIe-K2-eaH" secondAttribute="centerX" id="vwO-87-5UE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GIe-K2-eaH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="A2h-fG-kBK"/>
+                <constraint firstAttribute="trailing" secondItem="GIe-K2-eaH" secondAttribute="trailing" constant="20" id="BKk-te-L5q"/>
+                <constraint firstItem="GIe-K2-eaH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cu3-oL-wVl"/>
+                <constraint firstItem="GIe-K2-eaH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="hHw-Rq-vBd"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
